@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  
+root to: "posts#index"
+  get "posts/new", to: "posts#new", as: "posts_new"
+  post "posts", to: "posts#create"
+
+  get "posts/:id/edit", to: "posts#edit", as: "edit_post"
+  put "posts/:id", to: "posts#update", as: "post"
+  get "posts/:id", to: "posts#show"
+  delete "posts/:id", to: "posts#destroy"
+
+  post "posts/:id/comments", to: "comments#create", as: "post_comments"
+  get "tagged/:name", to: "tags#index", as: "tagged_posts"
+
+  get "signups/new", to: "registrations#new", as: "new_signup"
+  post "signups", to: "registrations#create", as: "signups"
+
+  get "login", to: "logins#new", as: "login"
+  post "login", to: "logins#create"
+  delete "login", to: "logins#destroy"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

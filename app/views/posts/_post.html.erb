@@ -1,0 +1,5 @@
+<h2 class="post-title"><%= link_to_unless_current(post.title, post_path(post)) %></h2>
+ <h4 class="post-date">Written <%= time_ago_in_words(post.created_at) %> ago</h4>
+ <div class="post-body">
+     <%= link_to(post.content, post.content) %>
+ </div>

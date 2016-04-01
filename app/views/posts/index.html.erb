@@ -1,0 +1,14 @@
+<%= link_to("Add a New Post!", posts_new_path) %>
+
+<h1>REDDIT POSTS</h1>
+
+<ul class="posts">
+  <% @posts.each do |post| %>
+      <li class="post">
+        <%= render partial: "post", locals: { post: post } %>
+        <%= link_to(post.title, post.content) %>
+        <%= link_to("Edit Post", edit_post_path(post)) %>
+        <%= link_to("Delete Post", post_path(post), method: :delete) %>
+      </li>
+  <% end %>
+</ul>
