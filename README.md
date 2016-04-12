@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/slaterson1/forgeddit.svg?branch=master)]
+[![Build Status](https://travis-ci.org/slaterson1/forgeddit.svg?branch=master)](http://travis-ci.org/slaterson1/forgeddit)
 
 == README
 
